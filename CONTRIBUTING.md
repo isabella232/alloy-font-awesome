@@ -66,6 +66,41 @@ The header is mandatory and the scope of the header is optional.
 - For multiple, comma-separated selectors, place each selector on it's own line
 - Attribute selectors, like `input[type="text"]` should always wrap the attribute's value in double quotes, for consistency and safety (see this [blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values) that can lead to XSS attacks)
 
+## Release process
+
+To publish a new version, follow these steps:
+
+```bash
+# Confirm you are logged in on Github and NPM
+ssh -T git@github.com
+yarn login
+
+# Checkout the latest code
+git checkout master
+
+# Update the CHANGELOG. With the `--interactive` flag, `changelog-generator`
+# will propose a semantic version. If you wish to manually set the version,
+# see `--help` for options.
+npx @liferay/changelog-generator --interactive
+
+# Confirm a staged CHANGELOG.md file. Review it and update if needed.
+
+# Update version. The version was determined in the last step.
+yarn version --new-version $VERSION
+
+# Confirm a tagged commit was created. It should contain CHANGELOG.md and the
+# version increase in package.json.
+
+# Change commit message
+git commit --amend -m "chore: prepare v$VERSION release"
+
+# Push to Git
+git push --follow-tags
+
+# Publish to NPM
+yarn publish
+```
+
 ## License
 
 By contributing your code, you agree to license your contribution under the terms of the MIT License:
