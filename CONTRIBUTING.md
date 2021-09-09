@@ -34,14 +34,30 @@ As of v3.2.0, Font Awesome's CSS, LESS, SCSS, and documentation are all powered 
 - Try not to pollute your pull request with unintended changes--keep them simple and small
 - Try to share which browsers your code has been tested in before submitting a pull request
 
-## Coding standards: HTML
+## Style Guides
+
+### Git Commit Messages
+
+This section shows you how to write commit messages. Follow these guidelines to help us maintain order and make it easier to locate your changes.
+
+Each commit message consists of a header, a body and a footer. The header has a special format that includes a type, a scope and a subject:
+
+```
+<type>(<scope>): <subject>
+```
+
+The header is mandatory and the scope of the header is optional.
+
+> This repository follows the "[Conventional Commits](https://www.conventionalcommits.org/)" specification.
+
+### Coding standards: HTML
 
 - Two spaces for indentation, never tabs
 - Double quotes only, never single quotes
 - Always use proper indentation
 - Use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags)
 
-## Coding standards: CSS
+### Coding standards: CSS
 
 - Adhere to the [Recess CSS property order](http://markdotto.com/2011/11/29/css-property-order/)
 - Multiple-line approach (one property and value per line)
