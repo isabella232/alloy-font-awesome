@@ -1,3 +1,7 @@
+> :warning: This this repo is archived (ie. switched to read-only mode). Development will continue in [the `liferay-font-awesome` package](https://npmjs.com/package/liferay-font-awesome) and [in `liferay/liferay-frontend-projects` monorepo](https://github.com/liferay/liferay-frontend-projects/tree/master/third-party/projects/alloy-font-awesome).
+
+---
+
 #[Font Awesome v3.2.1](http://fontawesome.io)
 ###the iconic font designed for Bootstrap
 
